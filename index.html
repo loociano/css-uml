@@ -14,15 +14,26 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/default.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <script src="js/cssuml.js" type="text/javascript"></script>
   </head>
   <body>
 
-    <div id="AbstractPageDataBuilder" class="abstract class"
-      data-title="AbstractPageDataBuilder" 
-      data-type="abstract">
+    <div id="BaseClass" class="class"
+      data-name="BaseClass">
 
-      <div class="title">AbstractPageDataBuilder</div>
+      <ul class="methods">
+        <li>method1</li>
+        <li>method2</li>
+      </ul>
+      <ul class="attributes">
+        <li>attribute1</li>
+        <li>attribute2</li>
+      </ul>
+    </div>
+
+    <div id="AbstractPageDataBuilder" class="abstract class"
+      data-name="AbstractPageDataBuilder" 
+      data-type="abstract"
+      data-extends="BaseClass">
 
       <ul class="methods">
         <li>method1</li>
@@ -35,7 +46,7 @@
     </div>
 
     <div id="DPURCPageDataBuilder" class="class"
-      data-title="DPURCPageDataBuilder" 
+      data-name="DPURCPageDataBuilder" 
       data-extends="AbstractPageDataBuilder">
 
       <ul class="methods">
@@ -48,6 +59,8 @@
       </ul>
     </div>
     </div>
+
+    <script src="js/css-uml.js" type="text/javascript"></script>
 
   </body>
 </html>
