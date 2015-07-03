@@ -1,0 +1,47 @@
+/*
+ *
+ * Luciano Rubio <luciano@loociano.com>
+ * July 2015
+ *
+ */
+body {
+    background-color: #F2F2F2;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; 
+}
+
+.class {
+    margin: 1em;
+    float: left;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.abstract {
+}
+
+.title {
+    font-weight: 400;
+    padding: 1em 1em;
+    background-color: white;
+}
+
+.methods,
+.attributes {
+    padding: 1em 1em;
+    background-color: #eee;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+.methods li,
+.attributes li {
+    margin: 0.4em 0;
+}
+
+.methods li::before {
+    
+}
+
