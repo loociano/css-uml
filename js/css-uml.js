@@ -9,27 +9,27 @@
   "use strict";
 
   var screen = {
-    width : window.innerWidth,
-    height : window.innerHeight
+    width: window.innerWidth,
+    height: window.innerHeight
   };
 
   var properties = {
-    _title : "title",
-    _extends : "extends",
-    _type : "type"
+    _title: "title",
+    _extends: "extends",
+    _type: "type"
   };
 
   var classes = {
-    _class : "class",
-    _abstract : "abstract"
+    _class: "class",
+    _abstract: "abstract"
   };
 
   function Rectangle(domElt) {
     this.domElt = domElt;
     this.name = domElt.dataset.name;
     this.refs = {
-      _extends : null
-    // Stores reference to parent Rectangle
+      _extends: null
+        // Stores reference to parent Rectangle
     };
     this.level = 0;
   }
@@ -47,7 +47,7 @@
   }
 
   function findRectangle(name) {
-    for ( var index in rectangles) {
+    for (var index in rectangles) {
       if (rectangles[index].name === name) {
         return r;
       }
@@ -55,7 +55,7 @@
   }
 
   // Compute graph
-  for ( var index in rectangles) {
+  for (var index in rectangles) {
     var r = rectangles[index];
     // Find parents
     if (r.domElt.dataset.hasOwnProperty(properties._extends)) {
@@ -67,9 +67,10 @@
   }
 
   function calculateNbLevels() {
-    var levels = 0, max = 0;
+    var levels = 0;
+    var max = 0;
 
-    for ( var index in rectangles) {
+    for (var index in rectangles) {
       var r = rectangles[index];
       var self = r; // save reference
       while (true) {
